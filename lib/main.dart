@@ -98,8 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _extractAllText() async {
     //Load the existing PDF document.
-    PdfDocument document =
-        PdfDocument(inputBytes: await _readDocumentData('pdf_succinctly.pdf'));
+    PdfDocument document = PdfDocument(
+        inputBytes: await _readDocumentData('COURSE_CATALOG_IJA.pdf'));
 
     //Create the new instance of the PdfTextExtractor.
     PdfTextExtractor extractor = PdfTextExtractor(document);
@@ -146,8 +146,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _extractTextFromSpecificPage() async {
     //Load the existing PDF document.
-    PdfDocument document =
-        PdfDocument(inputBytes: await _readDocumentData('pdf_succinctly.pdf'));
+    PdfDocument document = PdfDocument(
+        inputBytes: await _readDocumentData('COURSE_CATALOG_IJA.pdf'));
 
     //Create the new instance of the PdfTextExtractor.
     PdfTextExtractor extractor = PdfTextExtractor(document);
@@ -161,8 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _extractTextFromRangeOfPage() async {
     //Load the existing PDF document.
-    PdfDocument document =
-        PdfDocument(inputBytes: await _readDocumentData('pdf_succinctly.pdf'));
+    PdfDocument document = PdfDocument(
+        inputBytes: await _readDocumentData('COURSE_CATALOG_IJA.pdf'));
 
     //Create the new instance of the PdfTextExtractor.
     PdfTextExtractor extractor = PdfTextExtractor(document);

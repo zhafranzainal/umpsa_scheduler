@@ -241,5 +241,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           );
         });
+
+    Clipboard.setData(ClipboardData(text: text)).then((value) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Text copied to clipboard'),
+        ),
+      );
+    }).catchError((error) {
+      print('Error copying text to clipboard: $error');
+    });
   }
 }
